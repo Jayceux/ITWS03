@@ -7,7 +7,7 @@ use Framework\Session;
 <header class="p-4 text-white bg-blue-900">
   <div class="container flex items-center justify-between mx-auto">
     <h1 class="text-3xl font-semibold">
-      <a href="/">Jobseeker</a>
+      <a href="/">WorkIT</a>
     </h1>
     <nav class="flex flex-row items-center gap-4">
       <?php if (Session::has('user')) : ?>
