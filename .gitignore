@@ -1,0 +1,8 @@
+/vendor
+/node_modules
+/config/db.php
+.env
+.vscode
+thumbs.db
+Desktop.ini
+.DS_Store
