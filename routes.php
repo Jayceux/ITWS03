@@ -1,14 +1,22 @@
 <?php
 
-// return [ 
-//         '/' => 'controllers/home.php',
-//         '/listings' => 'controllers/listings/index.php',
-//         'listings/create' => 'controllers/listings/create.php',
-//         '404' => 'controllers/error/404.php'
-//     ];
+/** @var mixed $router */
 
-$router->get('/', 'controllers/home.php'); //define a GET route for the home page
-$router->get('/listings', 'controllers/listings/index.php'); //define a GET route for the listings page
-$router->get('/listings/create', 'controllers/listings/create.php'); //define a GET route for the create listing page
-// if you want to create a new listing, you would typically use a POST request to submit the form data to the server. So you would define a POST route for the create listing page like this:
-$router->get('/listing', 'controllers/listings/show.php'); //define a GET route for the show listing page
+$router->get('/', 'HomeController@index');
+$router->get('/listings', 'ListingController@index');
+$router->get('/listings/search', 'ListingController@search');
+
+$router->get('/listings/create', 'ListingController@create', ['auth']);
+$router->get('/listings/{id}/edit', 'ListingController@edit', ['auth']);
+$router->get('/listings/{id}', 'ListingController@show');
+
+$router->post('/listings', 'ListingController@store', ['auth']);
+$router->put('/listings/{id}', 'ListingController@update', ['auth']);
+$router->delete('/listings/{id}', 'ListingController@destroy', ['auth']);
+
+$router->get('/auth/register', 'UserController@create', ['guest']);
+$router->get('/auth/login', 'UserController@login', ['guest']);
+
+$router->post('/auth/register', 'UserController@store', ['guest']);
+$router->post('/auth/logout', 'UserController@logout', ['auth']);
+$router->post('/auth/login', 'UserController@authenticate', ['guest']);
