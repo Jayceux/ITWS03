@@ -8,12 +8,13 @@
 		<p class="mb-4 text-2xl text-center">
 			<?= $message ?? "The page you are looking for could not be found." ?>
 		</p>
-		<div class="text-center">
-			<a href="/" class="px-4 py-2 text-white rounded bg-primary hover:bg-primary/90">
+		<div class="flex justify-center">
+			<a href="/" class="px-6 py-3 text-white bg-blue-900 rounded hover:bg-blue-800">
 				Go Back Home
 			</a>
 		</div>
 	</div>
 </section>
 
-<?= loadPartial('footer') ?>
+<?= loadPartial('bottom-banner') ?>
+<?= loadPartial('footer'); ?>
