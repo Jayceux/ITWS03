@@ -1,0 +1,16 @@
+{
+	"name": "jayceux/ITWS03",
+	"description": "Job Seeker Web Application",
+	"authors": [
+		{
+			"name": "Jc Luy",
+			"email": "jcluy172@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Framework\\": "Framework/",
+			"App\\": "App/"
+		}
+	}
+}
