@@ -6,7 +6,7 @@
 <!-- Job Listings -->
 <section>
     <div class="container p-4 mx-auto mt-4">
-        <div class="p-3 mb-4 text-3xl font-bold text-center border border-gray-300">Recent Jobs</div>
+        <div class="p-3 mb-4 text-3xl font-bold text-center border border-gray-300">Work Opportunities</div>
         <div class="grid grid-cols-1 gap-4 mb-6 md:grid-cols-3">
             <?php foreach (($listings ?? []) as $listing) : ?>
                 <div class="bg-white rounded-lg shadow-md">
